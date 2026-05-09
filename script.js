@@ -37,10 +37,15 @@ function updateCalendar() {
   const now = new Date();
 
   document.getElementById("time").textContent =
-    "Time: " + now.toLocaleTimeString();
+    "Time: " + now.toLocaleTimeString("en-US");
 
   document.getElementById("date").textContent =
-    "Date: " + now.toDateString();
+    "Date: " + now.toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
 }
 
 setInterval(updateCalendar, 1000);
