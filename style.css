@@ -16,7 +16,7 @@ body {
 }
 
 .card {
-  width: 420px;
+  width: 600px;
   background: white;
   text-align: center;
   padding: 45px 35px;
@@ -27,14 +27,33 @@ body {
 .course {
   color: #5b00c9;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
 h1 {
-  font-size: 46px;
-  margin: 10px 0;
+  font-size: 44px;
+  margin: 10px 0 30px;
   color: #222;
+}
+
+.calendar-box {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+}
+
+.calendar-box h2,
+.stopwatch-box h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+#time,
+#date {
+  font-size: 24px;
+  color: #444;
+  margin: 8px 0;
 }
 
 .description {
@@ -77,33 +96,4 @@ button {
 #resetBtn {
   background: #222;
   color: white;
-}
-
-button:hover {
-  opacity: 0.85;
-}
-
-.note {
-  margin-top: 25px;
-  color: #777;
-  font-size: 14px;
-}
-
-.calendar-box {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 2px solid #ddd;
-}
-
-.calendar-box h2 {
-  font-size: 38px;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-#time,
-#date {
-  font-size: 24px;
-  color: #444;
-  margin: 10px 0;
 }
