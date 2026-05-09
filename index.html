@@ -1,47 +1,44 @@
-let seconds = 0;
-let timer = null;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calendar & Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
 
-const display = document.getElementById("display");
-const startBtn = document.getElementById("startBtn");
-const stopBtn = document.getElementById("stopBtn");
-const resetBtn = document.getElementById("resetBtn");
+<body>
+  <main class="container">
+    <section class="card">
+      <p class="course">WST154 JavaScript</p>
+      <h1>Calendar & Stopwatch</h1>
 
-function updateDisplay() {
-  display.textContent = seconds;
-}
+      <div class="calendar-box">
+        <h2>Calendar</h2>
+        <p id="time">Time:</p>
+        <p id="date">Date:</p>
+      </div>
 
-function countSeconds() {
-  seconds++;
-  updateDisplay();
-}
+      <div class="stopwatch-box">
+        <h2>Stop Watch</h2>
+        <p class="description">
+          This stopwatch updates every second using JavaScript setInterval().
+        </p>
 
-startBtn.addEventListener("click", function () {
-  if (timer === null) {
-    timer = setInterval(countSeconds, 1000);
-  }
-});
+        <div id="display">0</div>
 
-stopBtn.addEventListener("click", function () {
-  clearInterval(timer);
-  timer = null;
-});
+        <div class="buttons">
+          <button id="startBtn">Start</button>
+          <button id="stopBtn">Stop</button>
+          <button id="resetBtn">Reset</button>
+        </div>
 
-resetBtn.addEventListener("click", function () {
-  clearInterval(timer);
-  timer = null;
-  seconds = 0;
-  updateDisplay();
-});
-
-function updateCalendar() {
-  const now = new Date();
-
-  document.getElementById("time").textContent =
-    "Time: " + now.toLocaleTimeString();
-
-  document.getElementById("date").textContent =
-    "Date: " + now.toDateString();
-}
-
-setInterval(updateCalendar, 1000);
-updateCalendar();
+        <p class="note">
+          Click Start to begin, Stop to pause, and Reset to clear the timer.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
