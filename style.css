@@ -88,3 +88,22 @@ button:hover {
   color: #777;
   font-size: 14px;
 }
+
+.calendar-box {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #ddd;
+}
+
+.calendar-box h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+#time,
+#date {
+  font-size: 24px;
+  color: #444;
+  margin: 10px 0;
+}
