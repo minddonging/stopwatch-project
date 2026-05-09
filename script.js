@@ -32,3 +32,21 @@ resetBtn.addEventListener("click", function () {
   seconds = 0;
   updateDisplay();
 });
+
+function updateCalendar() {
+
+  const now = new Date();
+
+  const timeElement = document.getElementById("time");
+  const dateElement = document.getElementById("date");
+
+  timeElement.textContent =
+    "Time: " + now.toLocaleTimeString();
+
+  dateElement.textContent =
+    "Date: " + now.toDateString();
+}
+
+setInterval(updateCalendar, 1000);
+
+updateCalendar();
